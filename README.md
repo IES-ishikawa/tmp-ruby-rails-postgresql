@@ -38,7 +38,6 @@
 既にホスト PC に PostgreSQL がインストールされていて、5432 は使っているという場合は  
 [.docker-compose.yml](./.devcontainer/docker-compose.yml)ファイルの 21 行目「5432:5432」のコロンより左側の値を変えてください。  
 例: 「5433:5432」  
-※[application.properties](./src/main/resources/application.properties)の 2 行目にあるポート番号は変えなくて良いです。
 
 9.Let's Hack!
 
