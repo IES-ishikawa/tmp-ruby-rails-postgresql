@@ -1,0 +1,66 @@
+{
+	"name": "Template",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"containerEnv": {
+		"NODE_OPTIONS": "$${containerEnv:NODE_OPTIONS} --no-experimental-fetch"
+	},
+	"forwardPorts": [
+		8080
+	],
+	"onCreateCommand": "gem update --system && gem install bundler && bundle install",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Shopify.ruby-extensions-pack",
+				"castwide.solargraph",
+				"Hridoy.rails-snippets",
+				"KoichiSasada.vscode-rdbg",
+				"rubocop.vscode-rubocop",
+				"PKief.material-icon-theme",
+				"MS-CEINTL.vscode-language-pack-ja"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+				"files.autoSave": "onFocusChange",
+				"debug.inlineValues": "on",
+				"debug.openDebug": "openOnSessionStart",
+				"debug.internalConsoleOptions": "openOnSessionStart",
+				"editor.dragAndDrop": false,
+				"editor.renderWhitespace": "all",
+				"editor.showFoldingControls": "always",
+				"editor.minimap.maxColumn": 40,
+				"editor.minimap.showSlider": "always",
+				"editor.minimap.size": "fit",
+				"editor.formatOnPaste": true,
+				"files.insertFinalNewline": true,
+				"files.eol": "\n",
+				"workbench.iconTheme": "material-icon-theme",
+				"workbench.preferredLightColorTheme": "Spinel Light",
+				"workbench.preferredDarkColorTheme": "Spinel",
+				"window.autoDetectColorScheme": true,
+				"ruby.useLanguageServer": true,
+				"ruby.intellisense": "rubyLocate",
+				"ruby.format": "rubocop",
+				"ruby.useBundler": true,
+				"ruby.rubocop.useBundler": true,
+				"ruby.lint": {
+					"rubocop": {
+						"useBundler": true
+					}
+				},
+				"ruby.rubocop.configFilePath": "/workspace/.rubocop.yml",
+				"rubyLsp.rubyVersionManager": "rbenv",
+				"rubyLsp.formatter": "rubocop",
+				"rubyLsp.bundleGemfile": "/workspace/Gemfile",
+				"ruby.lsp.tcpPort": 7654,
+				"solargraph.transport": "stdio",
+				"solargraph.logLevel": "debug",
+				"solargraph.diagnostics": true,
+				"solargraph.hover": false
+			}
+		}
+	},
+	"remoteUser": "vscode"
+}
