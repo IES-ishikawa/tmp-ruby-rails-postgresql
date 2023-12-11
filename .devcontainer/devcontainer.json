@@ -7,7 +7,7 @@
 		"NODE_OPTIONS": "$${containerEnv:NODE_OPTIONS} --no-experimental-fetch"
 	},
 	"forwardPorts": [
-		8080
+		3000
 	],
 	"onCreateCommand": "gem update --system && gem install bundler && bundle install",
 	"customizations": {
